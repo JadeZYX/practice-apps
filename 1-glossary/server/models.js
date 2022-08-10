@@ -2,7 +2,7 @@ var db = require('./db.js');
 
 module.exports = {
   getAll: function (callback) {
-    return db.Words.find()
+    return db.Words.find({})
       .then((data) => callback(null, data))
       .catch((err) => callback(err));
   },
